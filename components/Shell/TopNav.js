@@ -11,14 +11,26 @@ function Search() {
   if (!hasAlgoliaConfig) {
     return null; // Hide search bar if no API keys
   }
+
+  // Configure insights plugin for AI Assistant
+  const insights = process.env.NEXT_PUBLIC_ALGOLIA_ASSISTANT_ID && 
+                   process.env.NEXT_PUBLIC_ALGOLIA_ASSISTANT_ID !== 'YOUR_ALGOLIA_ASSISTANT_ID';
   
-  return (
-    <DocSearch
-      appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID}
-      apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY}
-      indexName="tirthanportal"
-    />
-  );
+  const searchConfig = {
+    appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+    apiKey: process.env.NEXT_PUBLIC_ALGOLIA_API_KEY,
+    indexName: "Tirthan",
+  };
+
+  // Add AI Assistant if configured
+  if (insights) {
+    searchConfig.insights = {
+      insightsClient: null, // Will use default Algolia insights
+    };
+    searchConfig.askAi = process.env.NEXT_PUBLIC_ALGOLIA_ASSISTANT_ID;
+  }
+  
+  return <DocSearch {...searchConfig} />;
 }
 
 export function TopNav({ children }) {
