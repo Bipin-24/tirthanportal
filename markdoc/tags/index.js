@@ -18,6 +18,7 @@ export { default as callout } from './callout.markdoc';
 export { default as code } from './code.markdoc';
 export { default as diagram } from './diagram.markdoc';
 export { default as features } from './features.markdoc';
+export { default as feedback } from './feedback.markdoc';
 export { default as icon } from './icon.markdoc';
 export { default as item } from './item.markdoc';
 export { default as example } from './markdoc-example.markdoc';
