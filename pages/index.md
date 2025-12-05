@@ -7,7 +7,7 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
 {% typewriter /%}
 
-> From personal blogs to massive documentation sites, Markdoc is a content authoring system that grows with you.
+> Democratize data access and accelerate data-driven initiatives.
 
 [View docs](/docs/getting-started) {% .primary %}
 
@@ -29,18 +29,18 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
   {% item %}
 
-  ### Open source {% .jumbo %}
+  ### Discover {% .jumbo %}
 
-  Maintain full control over your code and content. Markdoc is open-source and fully extensible.
+  Discover, understand, and access all your data instantly—so your teams spend less time hunting and more time building AI that delivers.
   {% /item %}
 
 - {% ascii "pencil" /%}
 
   {% item %}
 
-  ### Developer & writer friendly {% .jumbo %}
+  ### Trust {% .jumbo %}
 
-  Markdoc delivers a powerful, flexible, developer experience (DX) with an equally capable authoring experience (AX).
+  Build trust, mitigate risk, and ensure compliance with automated governance that scales at the speed of your AI initiatives.
 
   {% /item %}
 
@@ -48,9 +48,9 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
   {% item %}
 
-  ### Adopt anywhere {% .jumbo %}
+  ### Activate {% .jumbo %}
 
-  Use Markdoc to create interactive documentation experiences, static content sites, authoring tooling, and more.
+  Activate data with agents and automations that ensure quality, reliability, and readiness across every AI initiative.
 
   {% /item %}
 
@@ -66,33 +66,27 @@ description: From personal blogs to massive documentation sites, Markdoc is a co
 
 ## Get started quickly {% .jumbo %}
 
-[Markdoc core](https://github.com/markdoc/markdoc) is a lightweight package containing everything you need to get started. If you want to get going even faster, check out our [Next.js plugin](https://github.com/markdoc/next.js) and deploy a Markdoc documentation site with zero boilerplate.
+Unlock data. Build trust. Turn AI into real enterprise outcomes. Enterprise data intelligence that empowers data teams and AI agents to discover, trust, and activate data at scale.
 
 [Explore documentation](/docs/getting-started) {% .primary %}
 
-[Live edit]() {% .primary %} {% .live-edit %}
 
 {% /item %}
 
 ```shell
-npm install @markdoc/markdoc
+Unlock data
+Build trust
+Turn AI into real enterprise outcomes
 ```
 
 ```js
-import Markdoc from '@markdoc/markdoc';
-
-const doc = `
-# Hello world.
-> My first Markdoc page
-`;
-
-const ast = Markdoc.parse(doc);
-
-const content = Markdoc.transform(ast);
-
-const html = Markdoc.renderers.html(content);
+Enterprise data 
+intelligence that 
+empowers data 
+teams and AI agents 
+to discover, trust, 
+and activate data at scale. ​
 ```
-
 {% /sideBySide %}
 
 {% /section %}
@@ -101,9 +95,9 @@ const html = Markdoc.renderers.html(content);
 
 {% sideBySide %}
 
-### Markdoc powers Stripe documentation {% .jumbo %}
+### Ease of use for data producers & consumers {% .jumbo %}
 
-Stripe created Markdoc to power its largest and [most detailed content site](https://stripe.com/docs). Since then, we have adopted it across the company, writing hundreds of thousands of lines of Markdoc to create thousands of pages of expressive, custom documentation.
+From cataloging to audit trails to agentic AI, Actian helps you simplify and accelerate your data and AI goals. Optimize operations, maximize investments, ensure compliance with agentic AI.
 
 {% /sideBySide %}
 
@@ -111,21 +105,21 @@ Stripe created Markdoc to power its largest and [most detailed content site](htt
 
 {% features %}
 
-- **Familiar syntax**
+- **Optimize operations**
 
-  Markdoc is a syntactic extension of [Markdown](https://commonmark.org/), so you can keep using all the syntax and tooling you are used to.
+  Automate, accelerate, & optimize your team operations instantly
 
   [Learn the syntax](/docs/syntax) {% .primary %}
 
-- **Easily extensible**
+- **Maximize investments**
 
-  Markdoc lets you customize all aspects of the system, from [custom tags](/docs/tags) and [nodes](/docs/nodes) to entirely [new renderers](/docs/render).
+  Measure, control, & maximize your existing investments effortlessly.
 
   [Learn more](/docs/render) {% .primary %}
 
-- **Built-in validation**
+- **Ensure compliance**
 
-  You can add custom validation throughout your content system, ensuring nothing breaks and your content remains consistent.
+  Govern, secure, & comply with regulatory requirements automatically
 
   [Learn more](/docs/validation) {% .primary %}
 

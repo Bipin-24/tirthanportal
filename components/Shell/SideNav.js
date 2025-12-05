@@ -4,7 +4,31 @@ import Link from 'next/link';
 
 const items = [
   {
-    title: 'Get started',
+    title: 'Intelligent Platform',
+    links: [
+      { href: '/docs/intro', children: 'Introduction' },
+    ]
+  },
+  {
+    title: 'Get started', 
+    links: [
+      { href: '/docs/zeenea-superadmin', children: 'Super Admin' },
+      { href: '/docs/zeenea-data-steward', children: 'Data Steward' },
+      { href: '/docs/zeenea-data-explorer', children: 'Data Explorer' },
+      { href: '/docs/zeenea-definitions', children: 'Definitions' }
+    ]
+  },
+  {
+    title: 'APIs',
+    links: [
+      { href: '/docs/zeenea-access-request-api', children: 'Access Request' },
+      { href: '/docs/zeenea-catalog-design-api', children: 'Catalog Design' },
+      { href: '/docs/zeenea-data-product-api', children: 'Data Product' },
+    ]
+  },
+  
+  {
+    title: 'Markdoc',
     links: [
       { href: '/docs/overview', children: 'What is Markdoc?' },
       { href: '/docs/getting-started', children: 'Installation' },

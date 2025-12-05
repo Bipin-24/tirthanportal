@@ -3,35 +3,48 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // Define all pages in order - this creates the navigation sequence
+// This should match the SideNav structure
 const navigationOrder = [
-  // Introduction
-  { href: '/docs/overview', title: 'What is Markdoc?' },
-  { href: '/docs/getting-started', title: 'Get started' },
+  // Intelligent Platform
+  { href: '/docs/intro', title: 'Introduction' },
   
-  // Core Concepts
-  { href: '/docs/syntax', title: 'Syntax' },
-  { href: '/docs/tags', title: 'Tags' },
+  // Get started
+  { href: '/docs/zeenea-superadmin', title: 'Super Admin' },
+  { href: '/docs/zeenea-data-steward', title: 'Data Steward' },
+  { href: '/docs/zeenea-data-explorer', title: 'Data Explorer' },
+  { href: '/docs/zeenea-definitions', title: 'Definitions' },
+  
+  // APIs
+  { href: '/docs/zeenea-access-request-api', title: 'Access Request' },
+  { href: '/docs/zeenea-catalog-design-api', title: 'Catalog Design' },
+  { href: '/docs/zeenea-data-product-api', title: 'Data Product' },
+  
+  // Markdoc
+  { href: '/docs/overview', title: 'What is Markdoc?' },
+  { href: '/docs/getting-started', title: 'Installation' },
+  { href: '/docs/faq', title: 'FAQ' },
+  
+  // Core concepts
+  { href: '/docs/syntax', title: 'Syntax and schema' },
   { href: '/docs/nodes', title: 'Nodes' },
+  { href: '/docs/tags', title: 'Tags' },
   { href: '/docs/attributes', title: 'Attributes' },
   { href: '/docs/variables', title: 'Variables' },
   { href: '/docs/functions', title: 'Functions' },
-  { href: '/docs/partials', title: 'Partials' },
-  
-  // Advanced
-  { href: '/docs/config', title: 'Config' },
+  { href: '/docs/render', title: 'Rendering' },
+  { href: '/docs/config', title: 'Config objects' },
   { href: '/docs/validation', title: 'Validation' },
+  
+  // Integration guides
+  { href: '/docs/examples', title: 'Common examples' },
+  { href: '/docs/examples/html', title: 'Using with HTML' },
+  { href: '/docs/nextjs', title: 'Using with Next.js' },
+  { href: '/docs/examples/react', title: 'Using with React' },
+  
+  // Advanced concepts
   { href: '/docs/frontmatter', title: 'Frontmatter' },
+  { href: '/docs/partials', title: 'Partials' },
   { href: '/docs/format', title: 'Formatting' },
-  { href: '/docs/render', title: 'Render' },
-  
-  // Integration
-  { href: '/docs/nextjs', title: 'Next.js' },
-  { href: '/docs/examples', title: 'Examples' },
-  { href: '/docs/examples/react', title: 'React example' },
-  { href: '/docs/examples/html', title: 'HTML example' },
-  
-  // Resources
-  { href: '/docs/faq', title: 'FAQ' },
 ];
 
 export function PrevNext() {

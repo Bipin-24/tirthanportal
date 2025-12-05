@@ -93,8 +93,8 @@ export default function MyApp(props) {
     <div className={`${isLandingPage ? 'page--landing' : ''}`}>
       <Head>
         <title>{`${TITLE} | ${title}`}</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
         <link
           rel="preload"
           as="font"
