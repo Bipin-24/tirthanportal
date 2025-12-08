@@ -1,6 +1,49 @@
 import * as React from 'react';
 
 export function Section({ children, className }) {
+  // If no className is provided, assume it's a docs card grid
+  // If className is provided, it's a landing page section (e.g., .hero, .value-props)
+  const isDocsCardGrid = !className;
+
+  // If it's a docs page without className, render as a grid of cards
+  if (isDocsCardGrid) {
+    return (
+      <div className="docs-section">
+        <div className="docs-grid">
+          {children}
+        </div>
+        <style jsx>
+          {`
+            .docs-section {
+              margin: 1.5rem 0;
+            }
+
+            .docs-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              gap: 1rem;
+              width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+              .docs-grid {
+                grid-template-columns: 1fr;
+                gap: 0.875rem;
+              }
+            }
+
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+              .docs-grid {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+          `}
+        </style>
+      </div>
+    );
+  }
+
+  // Default behavior for landing pages
   return (
     <div className={['section', className].filter(Boolean).join(' ')}>
       <section>{children}</section>
@@ -30,3 +73,4 @@ export function Section({ children, className }) {
     </div>
   );
 }
+

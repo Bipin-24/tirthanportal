@@ -42,6 +42,7 @@ const items = [
       { href: '/docs/syntax', children: 'Syntax and schema' },
       { href: '/docs/nodes', children: 'Nodes' },
       { href: '/docs/tags', children: 'Tags' },
+      { href: '/docs/partials', children: 'Partials' },
       { href: '/docs/attributes', children: 'Attributes' },
       { href: '/docs/variables', children: 'Variables' },
       { href: '/docs/functions', children: 'Functions' },

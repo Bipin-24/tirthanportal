@@ -1,4 +1,9 @@
-# Catalog Design API
+---
+title: Catalog Design API
+description: Retrieve and update metamodel details using the GraphQL-based Catalog Design API for data catalog configuration.
+---
+
+# {% $markdoc.frontmatter.title %}
 
 The Catalog Design API allows you to retrieve and update details of your metamodel. You can also use this API to retrieve property id, which can in turn be used for other purposes. List of available operations:
 * Retrieve information about a property by its name:

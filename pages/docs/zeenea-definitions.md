@@ -1,6 +1,12 @@
-# Definitions
+---
+title: Definitions
+description: Comprehensive glossary of Actian Zeenea-specific terms and concepts for data catalog management and governance.
+---
+
+# {% $markdoc.frontmatter.title %}
 
 This list highlights select Zeenea-specific terms you might encounter in the documentation. It focuses on terms with unique meanings within Zeenea Many definitions on the list provide links to articles and core reference materials, offering deeper insights into the concepts and practical applications of the associated keyword.
+
 Use the search feature in your browser to quickly find the term or phrase that you are looking for. Search is usually activated with **CTRL+F** or **⌘ + F**.
 
 ## Category

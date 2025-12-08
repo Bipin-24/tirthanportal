@@ -16,6 +16,8 @@ Here's an example of including the `header.md` file as a partial.
 
 {% /example %}
 
+
+
 #### Registering partials
 
 You define partials by creating a mapping from the file name to an abstract syntax tree (AST) node in your [`config` object](/docs/config). The default `partial` [tag](/docs/tags) looks at this config to include the right content.
