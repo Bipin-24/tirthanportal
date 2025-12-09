@@ -44,9 +44,9 @@ export function TopNav({ children }) {
               src="/actian-logo.svg"
               alt="Actian"
               title="Actian"
-              width="225"
-              height="50"
-              style={{ height: '50px', width: 'auto' }}
+              width="270"
+              height="60"
+              style={{ height: '60px', width: 'auto' }}
             />
           </Link>
           <button

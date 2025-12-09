@@ -292,7 +292,8 @@ code {
   white-space: nowrap;
 }
 
-img {
+/* Enhanced image quality - excluding logos and icons */
+img:not([src*="logo"]):not([src*="icon"]) {
   max-width: 100%;
   height: auto;
   image-rendering: -webkit-optimize-contrast;
@@ -306,15 +307,22 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Default img styles for logos and icons */
+img[src*="logo"],
+img[src*="icon"] {
+  max-width: 100%;
+  height: auto;
+}
+
 /* High DPI display optimization */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  img {
+  img:not([src*="logo"]):not([src*="icon"]) {
     image-rendering: -webkit-optimize-contrast;
   }
 }
 
 /* Dark mode image adjustments */
-.dark img {
+.dark img:not([src*="logo"]):not([src*="icon"]) {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 

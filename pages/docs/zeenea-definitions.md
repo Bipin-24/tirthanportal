@@ -178,3 +178,6 @@ They are therefore present in the object's detail in the same way as the followi
 * properties
 
 Read more: [Importing Datasets or Visualizations](../Zeenea_Studio/zeenea-importing-datasets-or-visualizations.md)
+
+
+{% partial file="header.md" /%}
