@@ -115,6 +115,6 @@ export function Item({ icon, href, title, children, ...props }) {
   }
 
   // Default behavior for landing page items
-  return <div {...props} />;
+  return <div {...props}>{children}</div>;
 }
 
