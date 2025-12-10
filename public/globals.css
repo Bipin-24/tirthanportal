@@ -65,8 +65,10 @@
   --text: var(--dark);
 
   --contrast-dark: var(--dark);
-  --code-background: var(--gray-light);
-  --code-border: var(--gray-medium);
+  /* Stripe-style dark navy code background */
+  --code-background: #0a2540;
+  --code-text: #e3e8ef;
+  --code-border: #0d3660;
   --toc-border: rgba(0, 0, 0, 0.14);
   --translucent: rgba(0, 0, 0, 0.4);
 
@@ -287,11 +289,12 @@ code {
   font-size: 15px;
   font-family: var(--mono);
   font-weight: 500;
-  padding: 1px 2px;
-  background: var(--code-background);
-  border: 1px solid var(--code-border);
-  border-radius: 3px;
+  padding: 3px 6px;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
   white-space: nowrap;
+  color: #0a2540;
 }
 
 /* Enhanced image quality - excluding logos and icons */
@@ -333,8 +336,11 @@ p a + a > img {
 }
 
 pre {
-  border-radius: 3px;
+  border-radius: 6px;
   border: 1px solid var(--code-border);
+  padding: 16px 20px;
+  overflow-x: auto;
+  background: var(--code-background);
 }
 
 kbd {
@@ -424,16 +430,75 @@ article {
   display: none;
 }
 
-/* Syntax highlighting */
+/* Syntax highlighting - Stripe style */
 pre[class*='language-'] {
-  /* Override Prism styles */
+  /* Override Prism styles to match Stripe documentation */
   text-shadow: none !important;
-  color: var(--text) !important;
+  color: var(--code-text) !important;
   background: var(--code-background) !important;
-  font-size: 14px !important;
-  line-height: 22px !important;
-  font-family: var(--mono) !important;
-  margin: 0 0 var(--default-vertical-spacing) !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;
+  margin: 16px 0 !important;
+  padding: 16px 20px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--code-border) !important;
+  overflow-x: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Line numbers styling */
+pre[class*='language-'].line-numbers {
+  position: relative;
+  padding-left: 3.8em !important;
+  counter-reset: linenumber;
+}
+
+pre[class*='language-'].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+/* Line numbers container */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 16px;
+  font-size: 13px;
+  line-height: 20px;
+  left: 0;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  user-select: none;
+  background: rgba(0, 0, 0, 0.15);
+  padding-top: 0;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+  padding-right: 0.8em;
+  text-align: right;
+  color: #8892a6 !important;
+  font-weight: 400 !important;
+  line-height: 20px;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #8892a6 !important;
+}
+
+/* Inline code inside pre blocks */
+pre[class*='language-'] code {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
 }
 
 pre[class*='language-'] .md-link {
@@ -441,33 +506,61 @@ pre[class*='language-'] .md-link {
 }
 
 .token {
-  color: var(--text) !important;
+  color: #e3e8ef !important;
   background: transparent !important;
+  font-size: 13px !important;
 }
 
-.token.comment {
-  color: var(--translucent) !important;
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8892a6 !important;
 }
 
 pre .token.string,
+pre .token.attr-value {
+  color: #8be9fd !important;
+}
+
 pre .token.boolean,
 pre .token.number {
-  color: var(--magenta) !important;
+  color: #bd93f9 !important;
 }
 
 pre .token.function,
-pre .token.tagType,
-pre .token.tag {
-  color: var(--blue) !important;
+pre .token.class-name {
+  color: #50fa7b !important;
 }
 
 pre .token.keyword,
+pre .token.operator,
 .cm-attribute {
-  color: var(--purple) !important;
+  color: #ff79c6 !important;
+}
+
+pre .token.property,
+pre .token.tag,
+pre .token.constant,
+pre .token.symbol,
+pre .token.deleted {
+  color: #8be9fd !important;
 }
 
 pre .token.variable {
-  color: var(--green) !important;
+  color: #50fa7b !important;
+}
+
+pre .token.punctuation,
+pre .token.attr-name,
+pre .token.selector {
+  color: #f8f8f2 !important;
+}
+
+pre .token.builtin,
+pre .token.char,
+pre .token.inserted {
+  color: #50fa7b !important;
 }
 
 .sandbox span.cm-comment {

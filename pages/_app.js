@@ -16,6 +16,8 @@ import 'prismjs/components/prism-toml.min';
 import 'prismjs/components/prism-typescript.min';
 import 'prismjs/components/prism-yaml.min';
 import 'prismjs/plugins/autolinker/prism-autolinker.min';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.min';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 import 'prismjs/themes/prism.css';
 
 // Import codemirror CSS only on client side

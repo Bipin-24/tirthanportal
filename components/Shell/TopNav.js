@@ -109,8 +109,14 @@ export function TopNav({ children }) {
             background: #424248;
           }
           nav :global(.DocSearch-Search-Icon) {
-            color: var(--dark);
+            color: #e3e8ef;
             width: 16px;
+          }
+          nav :global(.DocSearch-Button:hover .DocSearch-Search-Icon) {
+            color: var(--dark);
+          }
+          :global(.dark) nav :global(.DocSearch-Button:hover .DocSearch-Search-Icon) {
+            color: #e3e8ef;
           }
           nav :global(.DocSearch-Button-Placeholder),
           nav :global(.DocSearch-Button-Keys) {
