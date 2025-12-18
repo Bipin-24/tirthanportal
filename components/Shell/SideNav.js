@@ -24,6 +24,15 @@ const items = [
       { href: '/docs/zeenea-access-request-api', children: 'Access Request' },
       { href: '/docs/zeenea-catalog-design-api', children: 'Catalog Design' },
       { href: '/docs/zeenea-data-product-api', children: 'Data Product' },
+      { href: '/docs/zeenea-graphql-api-v2-limitations', children: 'GraphQL' },
+    ]
+  },
+  {
+    title: 'Connectors',
+    links: [
+      { href: '/docs/zeenea-connector-looker', children: 'Looker' },
+      { href: '/docs/zeenea-connectors-list', children: 'List' },
+      { href: '/docs/zeenea-dataset-detection', children: 'Dataset' },
     ]
   },
   

@@ -90,3 +90,6 @@ Zeenea Studio enables data management teams to manage, maintain, and enrich the 
 With Zeenea Explorer, business users can access a user-friendly interface and customized exploration paths to make their data discovery more efficient. It offers a simple and intuitive interface designed for efficient data exploration and collaboration.  
 
 ![](/images/zeenea-explorer.png)
+
+
+

@@ -44,6 +44,10 @@ Note: To use the APIs with Playground, you will need a valid API Key in the "HTT
 ## Use Case Examples
 
 ### Example 1: Retrieve a specific property's id and type
+
+The below request will return the following:
+
+{% sideBySide %}
  
 ```js
 query FindPropertyByName($input: String!) {
@@ -56,8 +60,6 @@ query FindPropertyByName($input: String!) {
     }
 }
 ```
-
-The above request will return the following:
 
 ```json
 {
@@ -74,8 +76,13 @@ The above request will return the following:
   }
 }
 ``` 
+{% /sideBySide %}
 
 ### Example 2: List all possible values for a select-type property
+
+The below request will return the following: 
+
+{% sideBySide %}
 
 ```js
 query FindPropertyByName($input: String!) {
@@ -89,7 +96,7 @@ query FindPropertyByName($input: String!) {
 }
 ```
 
-The above request will return the following: 
+
 
 ```json
 {
@@ -109,3 +116,5 @@ The above request will return the following:
   }
 }
 ```
+
+{% /sideBySide %}
